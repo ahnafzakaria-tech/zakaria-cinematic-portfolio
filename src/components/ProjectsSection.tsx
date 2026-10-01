@@ -7,133 +7,46 @@ interface Project {
   title: string;
   category: string;
   description: string;
-  githubUrl: string;
-  liveUrl?: string;
-  image?: string;
-  tech: string[];
+  experienceUrl: string;
+  contactUrl: string;
+  cover: string;
+  disciplines: string[];
   metrics: { label: string; value: string }[];
 }
 
 const projects: Project[] = [
   {
     number: '01',
-    title: 'The 3D Nexus',
-    category: 'IMMERSIVE THREE.JS 3D PORTFOLIO',
+    title: 'Starah Independent Power Plant',
+    category: '2 GW ONSHORE WIND / SAUDI ARABIA',
     description:
-      'High-performance interactive 3D web experience built with Three.js, React Three Fiber (R3F), and GSAP ScrollSmoother. Features custom shader lighting, interactive camera movements, and fluid cinematic choreography.',
-    githubUrl: 'https://github.com/Hxni786',
-    liveUrl: 'https://hxnix-gold.vercel.app/',
-    image: 'https://raw.githubusercontent.com/Hxni786/3d-portfolio-main/main/public/images/preview.png',
-    tech: ['React', 'Three.js', 'R3F', 'GSAP', 'TypeScript', 'Tailwind CSS'],
+      'Project Document Controller at CEEC (China Energy Engineering Corporation), supporting ACWA Power’s 2 GW onshore wind project. Manage numbering and coding, engineering drawing revisions, MOM records, and MOS/RA approval routing in Thinkproject. Track FCRs, site instructions, MARs, concrete pouring records, and overdue submissions while training engineers in document workflows.',
+      experienceUrl: '#experience',
+      contactUrl: '#contact',
+      cover: '/assets/starah-cover.jpg',
+    disciplines: ['Thinkproject', 'Revision Control', 'MOM', 'MOS / RA', 'FCR / MAR', 'Engineer Training'],
     metrics: [
-      { label: 'PLATFORM', value: 'Interactive 3D Web' },
-      { label: 'ENGINE', value: 'Three.js / WebGL' },
-      { label: 'MOTION', value: 'GSAP ScrollSmoother' },
+      { label: 'PERIOD', value: 'Nov 2025–Present' },
+      { label: 'EMPLOYER', value: 'CEEC' },
+      { label: 'OWNER', value: 'ACWA Power' },
+      { label: 'EDMS', value: 'Thinkproject' },
     ],
   },
   {
     number: '02',
-    title: 'Editorial Excellence',
-    category: 'FULL-STACK BOUTIQUE E-COMMERCE',
+    title: 'Meghnaghat 718 MW Combined Cycle Power Plant',
+    category: 'COMBINED CYCLE POWER / BANGLADESH',
     description:
-      'High-end luxury e-commerce boutique featuring dynamic catalog filtering, shopping cart state management, administrative controls, and persistent relational data storage with MySQL.',
-    githubUrl: 'https://github.com/Hxni786/Hxni-Ecommerce-Store',
-    image: 'https://raw.githubusercontent.com/Hxni786/Hxni-Ecommerce-Store/main/screenshot_home.png',
-    tech: ['React.js', 'Node.js', 'Express.js', 'MySQL', 'Tailwind CSS', 'REST API'],
+      'Supported Samsung C&T’s full-lifecycle project records for JERA Meghnaghat Power Limited’s 718 MW plant, powered by GE Vernova technology. Managed transmittals, reports, as-built records, handover documentation, and training through Samsung Knox Portal (S-PMIS). The project achieved commercial operation (COD) in 2025.',
+      experienceUrl: '#experience',
+      contactUrl: '#contact',
+      cover: '/assets/aerial-1.jpg',
+    disciplines: ['S-PMIS', 'Transmittals', 'Project Reports', 'As-Builts', 'Handover', 'Training'],
     metrics: [
-      { label: 'ARCHITECTURE', value: 'Full-Stack MVC' },
-      { label: 'DATABASE', value: 'ACID MySQL' },
-      { label: 'UI/UX', value: 'Editorial Aesthetics' },
-    ],
-  },
-  {
-    number: '03',
-    title: 'Bespoke E-store 2.0',
-    category: 'LUXURY MINIMALIST MOBILE COMMERCE',
-    description:
-      'Sophisticated mobile commerce experience engineered with React Native and Expo. Implements clean catalog exploration, product variations, real-time cart persistence, and REST API communication.',
-    githubUrl: 'https://github.com/Hxni786/E-store2',
-    image: 'https://raw.githubusercontent.com/Hxni786/E-store2/main/docs/ui-preview.png',
-    tech: ['React Native', 'Expo', 'Node.js', 'REST API', 'JavaScript', 'Tailwind'],
-    metrics: [
-      { label: 'PLATFORM', value: 'iOS & Android (Expo)' },
-      { label: 'INTEGRATION', value: 'RESTful Endpoints' },
-      { label: 'EXPERIENCE', value: 'Minimalist Mobile UI' },
-    ],
-  },
-  {
-    number: '04',
-    title: 'TicketVerse',
-    category: 'PREMIUM EVENT BOOKING SYSTEM',
-    description:
-      'Cross-platform mobile ticketing application featuring interactive seating maps, event scheduling, digital pass issuance, and transactional backend processing with Node.js and MySQL.',
-    githubUrl: 'https://github.com/Hxni786/Ticket-Booking-App',
-    image: 'https://raw.githubusercontent.com/Hxni786/Ticket-Booking-App/main/mobile/assets/promo1.png',
-    tech: ['React Native', 'Node.js', 'Express.js', 'MySQL', 'REST API'],
-    metrics: [
-      { label: 'SYSTEM', value: 'Seat Reservation' },
-      { label: 'BACKEND', value: 'Express + Node' },
-      { label: 'DATABASE', value: 'Relational MySQL' },
-    ],
-  },
-  {
-    number: '05',
-    title: 'NIXH Social',
-    category: 'ENTERPRISE SOCIAL DIRECTORY ENGINE',
-    description:
-      'Dynamic multi-user social networking application featuring live activity feeds, rich user profiles, cloud media storage, real-time database synchronization, and authenticated messaging.',
-    githubUrl: 'https://github.com/Hxni786/Nixh-A-social-Media-App',
-    image: 'https://raw.githubusercontent.com/Hxni786/Nixh-A-social-Media-App/main/docs/assets/mobile_mockup.png',
-    tech: ['React Native', 'Firebase', 'Node.js', 'REST API', 'Cloud Firestore'],
-    metrics: [
-      { label: 'CLOUD', value: 'Firebase Firestore' },
-      { label: 'COMMUNITY', value: 'Multi-User Feed' },
-      { label: 'SECURITY', value: 'Token Auth' },
-    ],
-  },
-  {
-    number: '06',
-    title: 'hxni Express',
-    category: 'PARALLAX FOOD DELIVERY APP',
-    description:
-      'Fast-paced culinary delivery platform built with fluid GSAP parallax scroll animations, live menu categories, customizable cart operations, and streamlined checkout flows.',
-    githubUrl: 'https://github.com/Hxni786/A-food-Delivery-App-hxni-express',
-    image: 'https://raw.githubusercontent.com/Hxni786/Hxni-Ecommerce-Store/main/profile_docs/assets/hxni_express_mockup.png',
-    tech: ['React Native', 'Expo', 'GSAP', 'Parallax Scroll', 'REST API'],
-    metrics: [
-      { label: 'ANIMATIONS', value: 'GSAP Parallax Physics' },
-      { label: 'INTERFACE', value: 'High-Fidelity Mobile' },
-      { label: 'FRAMEWORK', value: 'React Native Expo' },
-    ],
-  },
-  {
-    number: '07',
-    title: 'Spice with Hassan',
-    category: 'BOUTIQUE RESTAURANT & ORDER SUITE',
-    description:
-      'End-to-end digital restaurant management platform facilitating menu browsing, custom ingredient selections, table reservations, and kitchen order pipeline integration.',
-    githubUrl: 'https://github.com/Hxni786/-A-Restaurant-App-Spice-with-Hassan',
-    image: 'https://raw.githubusercontent.com/Hxni786/Hxni-Ecommerce-Store/main/profile_docs/assets/spice_hassan_mockup.png',
-    tech: ['React Native', 'Node.js', 'Express.js', 'MySQL', 'REST API'],
-    metrics: [
-      { label: 'DOMAIN', value: 'Culinary Hospitality' },
-      { label: 'MANAGEMENT', value: 'Order Lifecycle' },
-      { label: 'DATABASE', value: 'MySQL Backend' },
-    ],
-  },
-  {
-    number: '08',
-    title: 'Hxni Finance',
-    category: 'PERSONAL ASSET & EXPENSE MANAGEMENT',
-    description:
-      'Intelligent financial monitoring suite with interactive expense categorization, visual Chart.js analytics, monthly cash flow projections, and persistent local & remote tracking.',
-    githubUrl: 'https://github.com/Hxni786/Expense-Tracker',
-    image: 'https://raw.githubusercontent.com/Hxni786/Hxni-Ecommerce-Store/main/profile_docs/assets/hxni_finance_mockup.png',
-    tech: ['React Native', 'Node.js', 'MySQL', 'Chart.js', 'REST API'],
-    metrics: [
-      { label: 'VISUALS', value: 'Chart.js Analytics' },
-      { label: 'PERSISTENCE', value: 'MySQL Relational' },
-      { label: 'MODULE', value: 'Budget & Expense' },
+      { label: 'PERIOD', value: 'Nov 2022–Oct 2025' },
+      { label: 'EMPLOYER', value: 'Samsung C&T' },
+      { label: 'OWNER', value: 'JERA Meghnaghat Power Limited' },
+      { label: 'MILESTONE', value: 'COD achieved 2025' },
     ],
   },
 ];
@@ -180,10 +93,10 @@ export const ProjectsSection: React.FC = () => {
             style={{ fontFamily: "'Bebas Neue', sans-serif" }}
           >
             <span className="block text-transparent bg-clip-text bg-gradient-to-b from-[#FFFFFF] via-[#D5CBC0] to-[#605448] drop-shadow-[0_4px_12px_rgba(0,0,0,0.8)]">
-              SELECTED WORKS.
+              ENERGY PROJECTS.
             </span>
             <span className="block text-transparent bg-clip-text bg-gradient-to-b from-[#F7E7C4] via-[#C99E5D] to-[#543B1A] drop-shadow-[0_8px_25px_rgba(201,158,93,0.35)]">
-              ENGINEERED VALUE.
+              DOCUMENTED VALUE.
             </span>
           </h2>
 
@@ -191,7 +104,7 @@ export const ProjectsSection: React.FC = () => {
             className="text-xs sm:text-sm font-light text-[#A8988B] max-w-sm mt-4 md:mt-0 leading-relaxed"
             style={{ fontFamily: "'Montserrat', sans-serif" }}
           >
-            Scroll down to unfold the system architecture cards. Each project is crafted with high-performance code and motion design.
+            Supporting major energy projects with controlled records, traceable approvals, and coordinated handover documentation.
           </p>
         </motion.div>
 
@@ -230,7 +143,7 @@ export const ProjectsSection: React.FC = () => {
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start relative z-10">
                   
                   {/* Left Column (7 Cols) */}
-                  <div className="lg:col-span-7 flex flex-col justify-between">
+                  <div className="min-w-0 lg:col-span-7 flex flex-col justify-between">
                     <div>
                       <div className="flex items-center space-x-3 mb-4">
                         <span className="text-xs font-mono font-bold text-[#D4AF37]">
@@ -256,9 +169,9 @@ export const ProjectsSection: React.FC = () => {
                       </p>
                     </div>
 
-                    {/* Tech Stack Pills */}
+                    {/* Document Control Disciplines */}
                     <div className="flex flex-wrap gap-2 pt-6 border-t border-[#8C6D4F]/25">
-                      {project.tech.map((t) => (
+                      {project.disciplines.map((t) => (
                         <span
                           key={t}
                           className="px-3 py-1 text-[10px] font-medium tracking-[0.16em] uppercase rounded-sm border border-[#8C6D4F]/40 bg-[#16120E] text-[#E8D7C5] group-hover:border-[#D4AF37]/50 transition-all duration-300"
@@ -271,36 +184,25 @@ export const ProjectsSection: React.FC = () => {
                   </div>
 
                   {/* Right Column (5 Cols) */}
-                  <div className="lg:col-span-5 flex flex-col justify-between h-full space-y-6 lg:pl-6 lg:border-l lg:border-[#8C6D4F]/25">
-                    {/* Optional Image Preview Box */}
-                    {project.image && (
-                      <div className="relative w-full h-36 sm:h-40 rounded-sm overflow-hidden border border-[#8C6D4F]/30 bg-[#050403] group-hover:border-[#D4AF37]/60 transition-colors">
-                        <img
-                          src={project.image}
-                          alt={project.title}
-                          className="w-full h-full object-cover object-top filter brightness-90 contrast-105 group-hover:scale-105 transition-transform duration-500"
-                          onError={(e) => {
-                            // Fallback if image fails to load
-                            (e.target as HTMLElement).style.display = 'none';
-                          }}
-                        />
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none" />
-                      </div>
-                    )}
-
+                  <div className="min-w-0 lg:col-span-5 flex flex-col justify-between h-full space-y-6 lg:pl-6 lg:border-l lg:border-[#8C6D4F]/25">
+                    <div className="relative h-44 overflow-hidden rounded-sm border border-[#8C6D4F]/40 bg-[#050403] group-hover:border-[#D4AF37]/70 sm:h-52">
+                      <img src={project.cover} alt={`${project.title} project cover`} className="h-full w-full object-cover brightness-75 contrast-110 transition duration-700 group-hover:scale-105 group-hover:brightness-95" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-[#050403] via-transparent to-transparent" />
+                      <span className="absolute bottom-3 left-3 text-[9px] font-mono uppercase tracking-[0.24em] text-[#F7E7C4]">FIELD DOCUMENTATION</span>
+                    </div>
                     <div className="space-y-3">
                       <span className="text-[9.5px] font-mono tracking-[0.25em] uppercase text-[#8C6D4F] block mb-2">
-                        // ARCHITECTURE METRICS
+                        // PROJECT PROFILE
                       </span>
                       {project.metrics.map((m) => (
                         <div
                           key={m.label}
-                          className="p-3.5 rounded-sm border border-[#8C6D4F]/25 bg-[#050403] flex items-center justify-between"
+                          className="p-3.5 rounded-sm border border-[#8C6D4F]/25 bg-[#050403] flex flex-col sm:flex-row sm:items-start sm:justify-between gap-1.5 sm:gap-4"
                         >
-                          <span className="text-[10px] font-mono text-[#A8988B]">
+                          <span className="shrink-0 text-[10px] font-mono text-[#A8988B]">
                             {m.label}
                           </span>
-                          <span className="text-[11px] font-mono font-medium text-[#F7E7C4]">
+                          <span className="min-w-0 break-words sm:text-right text-[11px] font-mono font-medium text-[#F7E7C4]">
                             {m.value}
                           </span>
                         </div>
@@ -309,28 +211,22 @@ export const ProjectsSection: React.FC = () => {
 
                     <div className="flex flex-col sm:flex-row gap-3 pt-2">
                       <a
-                        href={project.githubUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
+                        href={project.experienceUrl}
                         className="flex-1 inline-flex items-center justify-center space-x-2 px-4 py-3 border border-[#8C6D4F] bg-[#16120E] hover:border-[#D4AF37] hover:bg-[#D4AF37] text-[#EAD8C7] hover:text-black text-[11px] font-medium tracking-[0.2em] uppercase transition-all duration-300 shadow-[0_0_20px_rgba(212,175,55,0.1)]"
                         style={{ fontFamily: "'Montserrat', sans-serif" }}
                       >
-                        <span>SOURCE CODE</span>
+                        <span>EXPERIENCE</span>
                         <span className="text-xs">↗</span>
                       </a>
 
-                      {project.liveUrl && (
-                        <a
-                          href={project.liveUrl}
-                          target="_blank"
-                          rel="noopener noreferrer"
+                      <a
+                          href={project.contactUrl}
                           className="flex-1 inline-flex items-center justify-center space-x-2 px-4 py-3 border border-[#D4AF37]/60 bg-[#D4AF37]/10 hover:bg-[#D4AF37] text-[#F7E7C4] hover:text-black text-[11px] font-medium tracking-[0.2em] uppercase transition-all duration-300"
                           style={{ fontFamily: "'Montserrat', sans-serif" }}
                         >
-                          <span>LIVE DEMO</span>
+                          <span>LET’S TALK</span>
                           <span className="text-xs">↗</span>
                         </a>
-                      )}
                     </div>
                   </div>
 

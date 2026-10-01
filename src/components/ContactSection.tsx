@@ -8,6 +8,9 @@ export const ContactSection: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    const subject = encodeURIComponent(`Portfolio enquiry from ${formData.name}`);
+    const body = encodeURIComponent(`${formData.message}\n\nReply to: ${formData.email}`);
+    window.location.href = `mailto:ahnafzakariaaz@gmail.com?subject=${subject}&body=${body}`;
     setSent(true);
   };
 
@@ -66,7 +69,7 @@ export const ContactSection: React.FC = () => {
                 className="text-xs sm:text-[13px] font-light text-[#A8988B] leading-relaxed max-w-md mb-8"
                 style={{ fontFamily: "'Montserrat', sans-serif" }}
               >
-                Have an ambitious web or mobile application to build, a creative engineering role, or a project collaboration in mind? Reach out directly via any channel below.
+                Available for EPC project opportunities, document control roles, and professional enquiries. Reach out directly via any channel below.
               </p>
 
               {/* Direct Channels */}
@@ -76,11 +79,11 @@ export const ContactSection: React.FC = () => {
                     // DIRECT INBOX
                   </span>
                   <a
-                    href="mailto:msgoat550@gmail.com"
+                    href="mailto:ahnafzakariaaz@gmail.com"
                     className="text-xs sm:text-sm font-light text-[#EAD8C7] hover:text-[#D4AF37] transition-colors"
                     style={{ fontFamily: "'Montserrat', sans-serif" }}
                   >
-                    msgoat550@gmail.com
+                    ahnafzakariaaz@gmail.com
                   </a>
                 </div>
 
@@ -92,7 +95,7 @@ export const ContactSection: React.FC = () => {
                     className="text-xs text-[#B3A497] font-light"
                     style={{ fontFamily: "'Montserrat', sans-serif" }}
                   >
-                    Computer Science (Web &amp; App Dev), Abasyn University — 2024–2028
+                    LL.M (CGPA 3.79) and LL.B (CGPA 3.70), BUBT
                   </p>
                 </div>
 
@@ -103,7 +106,7 @@ export const ContactSection: React.FC = () => {
                   </span>
                   <div className="flex flex-wrap gap-2.5">
                     <a
-                      href="https://www.linkedin.com/in/syed-hassan-dildar-b40649400"
+                      href="https://www.linkedin.com/in/workwithzakariapro"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="px-3.5 py-1.5 text-[10.5px] font-medium tracking-[0.16em] uppercase rounded-sm border border-[#8C6D4F]/40 bg-[#14100D] hover:border-[#D4AF37] hover:text-white text-[#EAD8C7] transition-all"
@@ -112,22 +115,22 @@ export const ContactSection: React.FC = () => {
                       LinkedIn ↗
                     </a>
                     <a
-                      href="https://github.com/Hxni786"
+                      href="https://wa.me/8801517813524"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="px-3.5 py-1.5 text-[10.5px] font-medium tracking-[0.16em] uppercase rounded-sm border border-[#8C6D4F]/40 bg-[#14100D] hover:border-[#D4AF37] hover:text-white text-[#EAD8C7] transition-all"
                       style={{ fontFamily: "'Montserrat', sans-serif" }}
                     >
-                      GitHub ↗
+                      WhatsApp ↗
                     </a>
                     <a
-                      href="https://www.instagram.com/the.cipher.stack/"
+                      href="tel:+966530026787"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="px-3.5 py-1.5 text-[10.5px] font-medium tracking-[0.16em] uppercase rounded-sm border border-[#8C6D4F]/40 bg-[#14100D] hover:border-[#D4AF37] hover:text-white text-[#EAD8C7] transition-all"
                       style={{ fontFamily: "'Montserrat', sans-serif" }}
                     >
-                      Instagram ↗
+                      Call KSA ↗
                     </a>
                   </div>
                 </div>
@@ -236,6 +239,7 @@ export const ContactSection: React.FC = () => {
           <span className="text-[10px] font-mono text-[#8C6D4F]">
             © {new Date().getFullYear()} • ENGINEERED WITH PRECISION
           </span>
+          <img src="/assets/Signature.png" alt="Zakaria signature" className="h-8 w-auto opacity-70 brightness-150 contrast-125" />
         </div>
 
       </div>

@@ -1,5 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Montserrat:wght@200;300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Herr+Von+Muellerhoff&family=Montserrat:wght@200;300;400;500;600&display=swap');
 @import "tailwindcss";
 html, body {
   margin: 0;
@@ -7,3 +7,8 @@ html, body {
   overflow-x: hidden;
   background-color: #000;
 }
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { font-family: 'Montserrat', sans-serif; }
+::selection { background: rgba(212, 175, 55, 0.45); color: #050403; }

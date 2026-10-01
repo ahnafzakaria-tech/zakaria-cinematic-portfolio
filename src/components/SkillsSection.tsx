@@ -1,38 +1,38 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 import type { Variants } from 'framer-motion';
 
 const bentoCategories = [
   {
-    title: 'CREATIVE FRONTEND & 3D',
-    badge: 'INTERACTIVE EXPERIENCES',
-    items: ['React.js', 'Three.js', 'GSAP', 'React Three Fiber', 'Tailwind CSS', 'Framer Motion'],
-    description: 'Specialized in building visually stunning, highly interactive web interfaces, 3D WebGL scenes, and fluid motion choreography.',
-    stat: '60 FPS MOTION',
+    title: 'DOCUMENT CONTROL',
+    badge: 'CONTROLLED RECORDS',
+    items: ['Numbering & Coding', 'Registration', 'Classification', 'Revision Control', 'Transmittals', 'Closeout'],
+    description: 'Maintaining traceable, correctly classified records across engineering, construction, approvals, handover, and project closeout workflows.',
+    stat: 'TRACEABLE RECORDS',
     colSpan: 'lg:col-span-7',
   },
   {
-    title: 'FULL STACK & MOBILE',
-    badge: 'CROSS-PLATFORM',
-    items: ['React Native', 'Expo', 'Node.js', 'Express.js', 'REST APIs', 'JavaScript (ES6+)'],
-    description: 'Developing end-to-end applications with React and React Native, focusing on performance, scalability, and seamless iOS & Android experiences.',
-    stat: 'IOS & ANDROID',
+    title: 'EDMS PLATFORMS',
+    badge: 'PROJECT SYSTEMS',
+    items: ['Thinkproject (Current)', 'S-PMIS (Previous)', 'Aconex (Trained)', 'Document Registers', 'Workflow Tracking'],
+    description: 'Live experience with Thinkproject (current) and Samsung Knox Portal (S-PMIS, previous), with professional training in Aconex and disciplined platform-based workflows.',
+    stat: 'LIVE + TRAINED',
     colSpan: 'lg:col-span-5',
   },
   {
-    title: 'DATABASE & CLOUD ARCHITECTURE',
-    badge: 'BACKEND STORAGE',
-    items: ['MySQL', 'Firebase', 'MongoDB', 'Cloud Firestore', 'Git & GitHub'],
-    description: 'Designing persistent relational schemas, real-time cloud data sync, secure token authentication, and robust REST APIs.',
-    stat: 'ACID & REAL-TIME',
+    title: 'CONSTRUCTION COORDINATION',
+    badge: 'SITE RECORDS',
+    items: ['MOM', 'MOS / RA Coordination', 'MAR / FCR', 'Site Instructions', 'Subcontractor Coordination', 'Overdue Monitoring'],
+    description: 'Coordinating construction records and approval routes so site teams, engineers, subcontractors, and stakeholders have current actionable information.',
+    stat: 'FIELD TO EDMS',
     colSpan: 'lg:col-span-5',
   },
   {
-    title: 'ENGINEERING & CREATIVE DESIGN',
-    badge: 'PROBLEM SOLVING',
-    items: ['TypeScript', 'Algorithms & DSA', 'UI/UX Design', 'Problem Solving', 'Creative Thinking'],
-    description: 'Solid computer science foundation combined with UI/UX precision, turning complex engineering requirements into elegant user journeys.',
-    stat: 'CS FOUNDATION',
+    title: 'COMPLIANCE & PRODUCTIVITY',
+    badge: 'LEGAL FOUNDATION',
+    items: ['LL.B / LL.M Foundation', 'Approval Routing', 'Regulatory Records', 'Advanced Excel / Word', 'PowerPoint', 'AI Productivity'],
+    description: 'Combining legal education with practical approval routing, regulatory recordkeeping, reporting, and modern productivity tools for project delivery.',
+    stat: 'PRECISION APPLIED',
     colSpan: 'lg:col-span-7',
   },
 ];
@@ -62,12 +62,10 @@ const cardVariants: Variants = {
 };
 
 export const SkillsSection: React.FC = () => {
-  const [, setHoveredIdx] = useState<number | null>(null);
-
   return (
     <section
       id="skills"
-      className="relative w-screen bg-black text-[#E8DFD8] font-sans selection:bg-[#cbb59d] selection:text-black pt-8 pb-24 px-6 sm:px-12 lg:px-20 overflow-hidden flex flex-col justify-center"
+      className="relative w-full bg-black text-[#E8DFD8] font-sans selection:bg-[#cbb59d] selection:text-black pt-8 pb-24 px-6 sm:px-12 lg:px-20 overflow-hidden flex flex-col justify-center"
     >
       {/* Ambient Glows */}
       <div className="absolute top-1/3 left-1/4 w-[34rem] h-[34rem] bg-[#D4AF37]/5 rounded-full blur-[170px] pointer-events-none" />
@@ -87,7 +85,7 @@ export const SkillsSection: React.FC = () => {
             className="text-[11px] font-medium tracking-[0.35em] uppercase text-[#D4AF37]"
             style={{ fontFamily: "'Montserrat', sans-serif" }}
           >
-            03 / TECH MATRIX
+             03 / CAPABILITY MATRIX
           </span>
           <div className="w-20 h-[1px] bg-gradient-to-r from-[#D4AF37]/80 via-[#8C6D4F]/40 to-transparent" />
         </motion.div>
@@ -105,10 +103,10 @@ export const SkillsSection: React.FC = () => {
             style={{ fontFamily: "'Bebas Neue', sans-serif" }}
           >
             <span className="block text-transparent bg-clip-text bg-gradient-to-b from-[#FFFFFF] via-[#D5CBC0] to-[#605448] drop-shadow-[0_4px_12px_rgba(0,0,0,0.8)]">
-              ARCHITECTURAL MASTERY.
+              CONTROLLED DELIVERY.
             </span>
             <span className="block text-transparent bg-clip-text bg-gradient-to-b from-[#F7E7C4] via-[#C99E5D] to-[#543B1A] drop-shadow-[0_8px_25px_rgba(201,158,93,0.35)]">
-              PRECISION APPLIED.
+              PROFESSIONAL SYSTEMS.
             </span>
           </h2>
         </motion.div>
@@ -121,12 +119,10 @@ export const SkillsSection: React.FC = () => {
           viewport={{ once: true, margin: '-60px' }}
           className="grid grid-cols-1 lg:grid-cols-12 gap-6"
         >
-          {bentoCategories.map((block, idx) => (
+          {bentoCategories.map((block) => (
             <motion.div
               key={block.title}
               variants={cardVariants}
-              onMouseEnter={() => setHoveredIdx(idx)}
-              onMouseLeave={() => setHoveredIdx(null)}
               whileHover={{ y: -5, transition: { duration: 0.25 } }}
               className={`${block.colSpan} relative p-8 sm:p-9 rounded-sm border border-[#8C6D4F]/35 bg-[#100D0B]/85 backdrop-blur-xl overflow-hidden transition-all duration-500 hover:border-[#D4AF37]/80 hover:shadow-[0_16px_45px_rgba(212,175,55,0.14)] cursor-pointer group`}
             >

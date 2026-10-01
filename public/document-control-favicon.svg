@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <title>Document Control Favicon</title>
+  <desc>Minimal document control icon with layered documents, version lines, and an approval checkmark.</desc>
+
+  <!-- Background -->
+  <rect width="512" height="512" rx="112" fill="#0A0A0A"/>
+
+  <!-- Back document -->
+  <path d="M145 108h151l58 58v218c0 14-11 25-25 25H145c-14 0-25-11-25-25V133c0-14 11-25 25-25Z"
+        fill="none" stroke="#6F7680" stroke-width="22" stroke-linejoin="round"/>
+  <path d="M296 108v58h58" fill="none" stroke="#6F7680" stroke-width="22"
+        stroke-linejoin="round"/>
+
+  <!-- Front controlled document -->
+  <path d="M178 76h151l58 58v218c0 14-11 25-25 25H178c-14 0-25-11-25-25V101c0-14 11-25 25-25Z"
+        fill="#0A0A0A" stroke="#FFFFFF" stroke-width="24" stroke-linejoin="round"/>
+  <path d="M329 76v58h58" fill="none" stroke="#FFFFFF" stroke-width="24"
+        stroke-linejoin="round"/>
+
+  <!-- Document metadata/version lines -->
+  <path d="M202 184h92M202 225h138M202 266h105"
+        fill="none" stroke="#FFFFFF" stroke-width="18" stroke-linecap="round"/>
+
+  <!-- Approval / controlled status -->
+  <circle cx="323" cy="326" r="57" fill="#0A0A0A" stroke="#FFFFFF" stroke-width="18"/>
+  <path d="M292 326l20 21 43-48"
+        fill="none" stroke="#FFFFFF" stroke-width="18"
+        stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Subtle control/version indicator -->
+  <path d="M202 326h55"
+        fill="none" stroke="#6F7680" stroke-width="14" stroke-linecap="round"/>
+</svg>
